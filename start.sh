@@ -11,8 +11,8 @@ sleep 10
 
 # 运行数据库迁移
 echo "运行数据库迁移..."
-python -m alembic upgrade head
+python3 -m alembic upgrade head
 
 # 启动应用
 echo "启动FastAPI应用..."
-python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+python3 -m uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
