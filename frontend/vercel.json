@@ -8,11 +8,8 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://your-railway-backend-url/api/$1"
+      "source": "/api/:path*",
+      "destination": "$NEXT_PUBLIC_API_URL/api/:path*"
     }
-  ],
-  "env": {
-    "NEXT_PUBLIC_API_URL": "https://your-railway-backend-url"
-  }
+  ]
 }
